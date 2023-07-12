@@ -20,7 +20,10 @@ function success(input) {
 function validatePassword() {
     if (password.value !== repassword.value ) {
         error(repassword, 'Passwords do not match');
-    } else {
+    }else if(repassword.value == '') {
+        error(repassword, 'Passwords do not match');
+    }
+    else {
         success(repassword);
        
     }
