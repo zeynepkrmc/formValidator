@@ -1,5 +1,3 @@
-
-
 const form = document.getElementById('form');
 const fname = document.getElementById('fname');
 const lname = document.getElementById('lname');
@@ -18,11 +16,13 @@ function success(input) {
     input.className = 'form-control is-valid';
 }
 
+
 function validatePassword() {
-    if (password.value !== repassword.value) {
+    if (password.value !== repassword.value ) {
         error(repassword, 'Passwords do not match');
     } else {
         success(repassword);
+       
     }
 }
 
@@ -51,6 +51,7 @@ function validatePasswordRequirements() {
 }
 
 form.addEventListener('submit', function(e) {
+    
     e.preventDefault();
 
     if (fname.value === '') {
